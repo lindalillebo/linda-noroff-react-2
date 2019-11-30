@@ -4,39 +4,36 @@ import Head from "../components/head";
 import Layout from "../components/layout/Layout";
 import axios from "axios";
 import { BASE_URL } from "../constants/API";
-import CharacterList from "../components/characters/list/CharacterList";
+import ElephantList from "../components/characters/list/ElephantList";
 
 export default function Index(props) {
 	return (
 		<Layout>
-			<Head title="Noroff Next" />
-
-			<CharacterList characters={props.characters} />
+			<Head title="Elephants" />
+			<ElephantList elephants={props.elephants} />
 		</Layout>
 	);
 }
 
 Index.propTypes = {
-	characters: PropTypes.arrayOf(PropTypes.object)
+	elephants: PropTypes.arrayOf(PropTypes.object)
 };
 
 Index.getInitialProps = async function() {
-	// in case there is an error in the API call
-	// we'll send an empty array in as the prop
-	let characters = [];
-
+	let elephants = [];
 	try {
-		const response = await axios.get(BASE_URL);
+		const headers = {
+			"X-Requested-With": "XMLHttpRequest"
+		};
+		const response = await axios.get(BASE_URL, { headers });
 		const data = response.data;
-		// data.results is the array of characters
-		characters = data.results;
-		console.log(characters);
+		elephants = data;
+		console.log(elephants);
 	} catch (error) {
 		console.log(error);
 	}
 
-	// the object we return here will become the props in the page component
 	return {
-		characters: characters
+		elephants: elephants
 	};
 };

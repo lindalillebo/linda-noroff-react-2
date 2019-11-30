@@ -8,7 +8,7 @@ import Container from "react-bootstrap/Container";
 import styled from "styled-components";
 
 const StyledContainer = styled(Container)`
-    margin-top: 30px;
+	margin-top: 30px;
 `;
 
 export default function Layout(props) {
@@ -25,7 +25,7 @@ export default function Layout(props) {
 			<Navbar bg="dark" variant="dark" expand="lg">
 				<Link href="/">
 					<a>
-						<Navbar.Brand>Rick and Morty</Navbar.Brand>
+						<Navbar.Brand>Elephants</Navbar.Brand>
 					</a>
 				</Link>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -36,9 +36,9 @@ export default function Layout(props) {
 								<Nav.Link as="span">Home</Nav.Link>
 							</a>
 						</Link>
-						<Link href="/about">
+						<Link href="/form">
 							<a>
-								<Nav.Link as="span">About</Nav.Link>
+								<Nav.Link as="span">Form</Nav.Link>
 							</a>
 						</Link>
 					</Nav>

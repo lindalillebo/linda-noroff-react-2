@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 const Image = styled.img`
-    border: 3px white solid;
-    max-width: 100%;
-    border-radius: ${props => (props.gender === "Female" ? "50%" : 0)};
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+	height: 200px;
 `;
 
 export default Image;
