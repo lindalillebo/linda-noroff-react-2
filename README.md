@@ -1,3 +1,3 @@
-# Code for Noroff React Part 2
+# Module Assignment 4, level 1.
 
-## Lesson 1
+Linda Lillebø, 30/11/19
